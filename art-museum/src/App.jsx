@@ -1,6 +1,7 @@
 import {createBrowserRouter, RouterProvider, Outlet} from 'react-router-dom';
 import harvardArt from './data/harvardArt';
 import GalleryNavigation from './components/GalleryNavigation';
+import GalleryView from './components/GalleryView';
 
 function Layout() {
   return (
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
             Look, but Don&apos;t Touch. Please select a Gallery in the navigation bar.
           </p>
         </> 
+      },
+      {
+        path: "/galleries/:galleryId",
+        element: <GalleryView />
       },
       {
         path: "*",
